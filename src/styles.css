@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    padding-bottom: 200px;
+}
+.class{
+    padding: 30px 60px;
+    border: 1px solid red;
+}
