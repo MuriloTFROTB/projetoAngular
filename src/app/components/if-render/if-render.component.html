@@ -1,0 +1,9 @@
+<div class="class">
+  <div *ngIf="canShow">
+    <h1>estamos mostrando isso pq e permitido</h1>
+    <h2 *ngIf="name=='matheu'; else nameNotFound">o nome e matheus</h2>
+    <ng-template #nameNotFound>
+        <h2>meu nome e murilo</h2>
+    </ng-template>
+</div>
+</div>
