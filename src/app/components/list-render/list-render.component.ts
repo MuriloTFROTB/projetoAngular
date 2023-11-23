@@ -8,14 +8,14 @@ import { ListService } from '../../service/list.service';
   styleUrl: './list-render.component.css',
 })
 export class ListRenderComponent {
-  constructor(private listService: ListService) {}
+  constructor(private listService: ListService) {
+    this.getAnimals();
+  }
+  getAnimals(): void {
+    this.listService.getAll().subscribe((animals)=>(this.animals=animals));
+  }
 
-  animals: Animal[] = [
-    { name: 'turca', type: 'Dog', age: 1 },
-    { name: 'Tom', type: 'Cat', age: 4 },
-    { name: 'Frida', type: 'Dog', age: 6 },
-    { name: 'Bob', type: 'Horse', age: 7 },
-  ];
+  animals: Animal[] = [];
   animalDetails = '';
   showAge(animal: Animal) {
     this.animalDetails = `o pet ${animal.name} tem ${animal.age} anos`;
